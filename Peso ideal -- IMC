@@ -1,0 +1,64 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <ctype.h>
+
+int main (){
+	
+	setlocale(LC_ALL, "");
+	
+	char sexo;
+	char nome[200];
+	float formula, resultado, altura, peso;
+
+	printf("Digite seu nome: ");
+	scanf("%s", &nome);
+	
+	printf("\nDigite o seu sexo - (M)/(F): ");
+	scanf("%s", &sexo);
+	
+	sexo - toupper(sexo);
+
+	
+		switch (sexo) {
+		
+		case 'M':
+			
+		printf("\nDigite sua altura (Centímetros): ");
+		scanf("%f", &altura); 
+			
+		system("cls");
+			
+	
+		formula = (72.7 * (altura / 100)) - 58;
+		
+		printf("\nNome: %s", nome);
+		printf("\nSexo: %c", sexo);
+		printf("\nAltura: %.2f", altura / 100, "\tMetros");	
+		printf("\nPeso ideal: %.2f", formula);
+		
+		break;
+		
+		case 'F':
+			
+		printf("\nDigite sua altura: ");
+		scanf("%f", &altura); 
+			
+		formula = (62.1 * (altura / 100)) - 44.7;
+			
+		printf("\nNome: %s", nome);
+		printf("\nSexo: %c", sexo);
+		printf("\nAltura: %.2f", altura / 100, "\tMetros");		
+		printf("\nPeso ideal: %.2f", formula);
+			
+		break;
+			
+		default:
+				
+		printf("\nDigite uma opção válida!");
+	
+	}
+	
+	
+	
+}
