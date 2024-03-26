@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main(){
+	
+	/* Faça um programa em C (ualize a estrutura for) que leia 10 valores
+inteiros e:
+ Encontre e mostre o maior valor
+ Encontre e mostre o menor valor
+ Calcule e mostre a média dos números lidos
+ */
+	
+	setlocale(LC_ALL, "");
+	
+	//iniciando as váriaveis 
+	int i=1, valor, maior, menor, media, soma=0;
+	
+    menor = valor;
+	//iniciando o laço
+    for(i=1;i <=10; i++){
+  	
+  	//pedindo valores e guardando
+  	printf("Digite o [%d]º valor: ", i);
+  	scanf("%d", &valor);
+  	
+  	//Incrementando os valores em uma variável "soma"
+  	soma = soma + valor;
+  	
+  	//Condição para o programa separar o maior e menor valor
+  	if (valor > maior){
+  		maior = valor;
+	  } else if (valor < menor){
+	  	menor = valor;
+	  }
+  }
+  
+    //Condição para média
+	media = soma / 10;
+	
+	//Imprimindo resultados 
+	printf("Maior valor: %d\n", maior);
+	printf("Menor valor: %d\n", menor);
+	printf("Média: %d\n", media);
+		
+	
+	
+	
+	
+}
