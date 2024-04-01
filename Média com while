@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <time.h>
+
+int main(){
+	
+	setlocale(LC_ALL, "");
+	float media, nota, soma=0, contador=0;
+	
+while (nota >=0){
+		
+	printf("Digite uma nota: ");
+	scanf("%f", &nota);	
+	system ("cls");
+	
+if(nota < 0){
+	
+	break;
+	
+}else if (nota > 10){
+	printf("Digite uma nota válida!");
+	sleep(2);
+	system("cls");
+	continue;
+}
+	
+	soma += nota;
+	contador++;
+	
+}
+
+	media = soma / contador;
+	
+	printf("Média dos valores: %.2f", media);
+
+	return 0;
+
+}
