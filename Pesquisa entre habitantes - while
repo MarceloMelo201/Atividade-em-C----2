@@ -1,0 +1,114 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <time.h>
+#include <ctype.h>
+#include <limits.h>
+
+int main (){
+	
+	setlocale(LC_ALL, "");
+	
+	int idade, escolha, contadorFem = 0, contador=0;
+	int somaTotal=0, somaHomem=0, somaFemi=0;
+	int  maior = INT_MIN, menor = INT_MAX;
+	
+	char sexo;
+	
+	float mediaGrupo, salarioHomem, salarioFemi;
+	
+		printf("=== MENU ===");
+		printf("\nCódigo |       Descrição");
+		printf("\n 1     |       Adcionar usuário");
+		printf("\n 2     |       Exibir resultados e sair");
+		printf("\n\nOpção:   ");
+		scanf("%d", &escolha);
+		
+
+	while (escolha != 2){
+		
+	 if (escolha == 1){
+		
+	    system("cls");
+	    
+	    printf("=== Adcionando usuário ===");
+		printf("\nDigite a idade: ");
+		scanf("%d", &idade);
+		
+	if (idade > maior){
+			maior = idade;
+		}
+		
+	if (idade < menor){
+			menor = idade;
+		}
+		
+		system("cls");
+		
+		printf("=== Adcionando usuário ===");
+		printf("\nDigite o sexo (M/F): ");
+		scanf(" %c", &sexo);
+			
+		sexo = toupper (sexo);
+	    system("cls");
+		
+	if (sexo == 'M'){
+		    printf("=== Adcionando usuário ===");
+			printf("\nDigite o salário: ");
+			scanf("%f", &salarioHomem);
+			
+			somaHomem += salarioHomem;
+			
+			contador++;
+			
+			system("cls");
+		}
+		if (sexo == 'F'){
+			
+			printf("=== Adcionando usuário ===");
+			printf("\nDigite o salário: ");
+			scanf("%f", &salarioFemi);
+			
+			somaFemi += salarioFemi;
+			
+			contador++;
+			
+			system("cls");
+		}
+		
+		if (salarioFemi >= 5000){
+			contadorFem++;
+		}
+		if (sexo != 'M' && sexo != 'F'){
+			printf("Digite uma opção válida!\nRetornando...");
+			
+			sleep(1);
+			continue;
+		}
+		
+		printf("=== MENU ===");
+		printf("\nCódigo |       Descrição");
+		printf("\n 1     |       Adcionar pessoa");
+		printf("\n 2     |       Exibir resultados e sair   \n");
+		printf("\n\nOpção:   ");
+		
+		scanf("%d", &escolha);
+		
+		system("cls");
+		
+		somaTotal = (somaHomem + somaFemi);
+		
+ }
+	   
+} 
+
+	    mediaGrupo = somaTotal / contador;
+	    
+	    printf("=== RESULTADOS ===\n");
+	    printf("\nMédia de salário do grupo: %.2f", mediaGrupo);
+	    printf("\nMaior idade do grupo: %d", maior);
+	    printf("\nMenor idade do grupo: %d", menor);
+	    printf("\nMulheres com salário maior/igual a R$5000: %d", contadorFem);
+	    
+	return 0 ;
+}
