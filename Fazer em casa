@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <time.h>
+#include <ctype.h>
+
+int main (){
+	
+	setlocale(LC_ALL, "");
+	
+	int idade, escolha;
+	char sexo;
+	float mediaGrupo, salario;
+	
+	
+	while (escolha != 2){
+			
+		printf("=== MENU ===");
+		printf("\nCódigo |       Descrição");
+		printf("\n 1     |       Adcionar pessoa");
+		printf("\n 2     |       Exibir resultados e sair   \n");
+		scanf("%d", &escolha);
+	
+	    system("cls");
+	    
+	    printf("Adcionar pessoa: ");
+		printf("\nDigite a idade: ");
+		scanf("%d", &idade);
+			
+		system("cls");
+		
+		printf("\nDigite o sexo: ");
+		scanf(" %c", &sexo);
+			
+		sexo = toupper (sexo);
+	
+		
+		
+	
+		
+    	} 
+	
+	
+	
+	
+	
+	return 0 ;
+}
