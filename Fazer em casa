@@ -13,12 +13,10 @@ int main (){
 	float mediaGrupo, salario;
 	
 		printf("=== MENU ===");
-		
 		printf("\nCódigo |       Descrição");
-		
 		printf("\n 1     |       Adcionar pessoa");
-		
-		printf("\n 2     |       Exibir resultados e sair   \n");
+		printf("\n 2     |       Exibir resultados e sair");
+		printf("\n\nOpção:   ");
 		scanf("%d", &escolha);
 	
 	while (escolha != 2){
@@ -40,8 +38,8 @@ int main (){
 		printf("=== MENU ===");
 		printf("\nCódigo |       Descrição");
 		printf("\n 1     |       Adcionar pessoa");
-		
 		printf("\n 2     |       Exibir resultados e sair   \n");
+		printf("\n\nOpção:   ");
 		
 		scanf("%d", &escolha);
 		
