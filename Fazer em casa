@@ -12,14 +12,16 @@ int main (){
 	char sexo;
 	float mediaGrupo, salario;
 	
-	
-	while (escolha != 2){
-			
 		printf("=== MENU ===");
+		
 		printf("\nCódigo |       Descrição");
+		
 		printf("\n 1     |       Adcionar pessoa");
+		
 		printf("\n 2     |       Exibir resultados e sair   \n");
 		scanf("%d", &escolha);
+	
+	while (escolha != 2){
 	
 	    system("cls");
 	    
@@ -35,14 +37,15 @@ int main (){
 		sexo = toupper (sexo);
 	
 		
+		printf("=== MENU ===");
+		printf("\nCódigo |       Descrição");
+		printf("\n 1     |       Adcionar pessoa");
 		
-	
+		printf("\n 2     |       Exibir resultados e sair   \n");
+		
+		scanf("%d", &escolha);
 		
     	} 
-	
-	
-	
-	
 	
 	return 0 ;
 }
