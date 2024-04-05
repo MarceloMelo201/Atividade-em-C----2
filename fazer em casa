@@ -1,0 +1,92 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <ctype.h>
+#include <limits.h>
+
+
+int main(){
+	
+	setlocale(LC_ALL, "");
+	
+	int salario, numFilhos=0, escolha, i, salarioFilho, maior = INT_MIN, menor = INT_MAX;
+	char escolhaFilho;
+	int contadorFilho=0, numSalario=0, contador=0, valorSal=0, soma=0, somaFil=0;
+	float mediaSal, mediaFil;
+	
+	
+	printf("=== MENU ===");
+	printf("\nCódigo  |    Descrição");
+	printf("\n1       |    Adicionar família");
+	printf("\n2       |    Sair e exibir resultados");
+	printf("\nOpção:  ");
+	
+	scanf("%d", &escolha);
+	
+	while(escolha !=2){
+		
+		if (escolha == 1){
+			
+			system("cls");
+			
+			printf("=== ADICIONANDO FAMÍLIA ===");
+			contador++;
+			printf("\nDigite o número de filhos: ");
+			
+			scanf("%d", &numFilhos);
+			somaFil += numFilhos;
+			
+			system("cls");
+	
+		
+		    printf("=== ADICIONANDO FAMÍLIA ===");
+			printf("\nQuantos salários existem na casa? ");
+			scanf("%d", &numSalario);
+			
+			system("cls");
+					
+    for(i=1;i<=numSalario;i++){
+			printf("=== ADICIONANDO FAMÍLIA ===");
+			printf("\nDigite o [%d]º salário: ", i);
+			scanf("%d", &valorSal);
+			soma += valorSal;
+			
+			system("cls");
+			
+			}
+				
+			if(valorSal > maior){
+				maior = valorSal;
+			}
+			if(valorSal  < menor){
+				menor = valorSal;
+			}	
+			
+		printf("=== MENU ===");
+		printf("\nCódigo  |    Descrição");
+		printf("\n1       |    Adicionar família");
+		printf("\n2       |    Sair e exibir resultados");
+		printf("\nOpção:  ");
+	
+		scanf("%d", &escolha);
+				
+			
+}
+		
+		
+		
+		
+	}
+		mediaSal = soma  / numSalario;
+		mediaFil = somaFil / contador;
+		system("cls");
+
+	    printf("Total de famílias: %d", contador);
+	    printf("\nMédia de salário: %.2f", mediaSal);
+	    printf("\nMédia do número de filhos: %.2f", mediaFil);
+	    printf("\nMaior salário: %d", maior);
+	    printf("\nMenor salário: %d", menor);
+ 
+	
+	return 0;
+}
