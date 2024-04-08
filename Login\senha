@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <string.h>
+#include <stdbool.h>
+
+
+int main (){
+setlocale(LC_ALL, "");
+
+char login[200], senha[200];
+char loginSalvo[200] = "Marcelo", senhaSalva[200] = "123";
+bool loginCorreto, senhaCorreta;
+int i, contador = 0, contadorSub = 3;
+	
+do{
+	
+	printf("=== ACESSO ===");
+	printf("\nDigite o login: ");
+	scanf("%s", &login);
+	printf("\nDigite a senha: ");
+	scanf("%s", &senha);
+	
+	
+	contadorSub --;
+	
+	printf("\nChances restantes: %d\n", contadorSub);
+
+    sleep(1);
+    system("cls");
+    
+	loginCorreto = strcmp(login, loginSalvo) == 0;
+	senhaCorreta = strcmp (senha, senhaSalva) == 0;
+	contador++;
+	
+	
+
+	
+	if (contador == 3){
+		
+		printf("\nVocê atingiu o número máximo de tentativas!");
+		sleep(1);
+		system("cls");
+		printf("\nAcesso negado...\n");
+		return 0;
+	}
+	
+	
+	
+	
+} while (!loginCorreto && !senhaCorreta);
+
+printf("\nAcesso autorizado.  \n");
+	
+	
+
+}
